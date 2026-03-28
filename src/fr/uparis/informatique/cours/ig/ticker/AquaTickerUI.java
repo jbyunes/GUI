@@ -13,7 +13,7 @@ public class AquaTickerUI extends TickerUI {
 	public void paint(Graphics g, JComponent co) {
 		Graphics2D g2 = (Graphics2D)g;
 		g2.setStroke(new BasicStroke(5));
-		super.paint(g2,  co);
+		super.paint(g2, co);
 	}
 	static public AquaTickerUI createUI() {
 		var ui = new AquaTickerUI();

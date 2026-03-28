@@ -23,9 +23,8 @@ class ColorableDrawingPanel extends JPanel implements MouseListener,MouseMotionL
 	private int x, y, ox, oy;
 	private Dimension dim;
 	private BufferedImage bi;
-	private Graphics gi;
+	private Graphics2D gi;
 	public ColorableDrawingPanel() {
-		super();
 		setBackground(Color.WHITE);
 		dim = new Dimension(500,500);
 		addMouseListener(this);
@@ -58,8 +57,9 @@ class ColorableDrawingPanel extends JPanel implements MouseListener,MouseMotionL
 	}
 	public void paintComponent(Graphics g) {
 		if (bi==null) { // create on off-screen if needed
-			bi = ((Graphics2D)g).getDeviceConfiguration().createCompatibleImage((int)dim.getWidth(),(int)dim.getHeight());
-			gi = bi.getGraphics();
+			Graphics2D g2 = (Graphics2D)g;
+			bi = g2.getDeviceConfiguration().createCompatibleImage((int)dim.getWidth(),(int)dim.getHeight());
+			gi = (Graphics2D)bi.getGraphics();
 			gi.setColor(getBackground());
 			gi.fillRect(0,0,(int)dim.getWidth(),(int)dim.getHeight());
 			gi.setColor(Color.BLACK);
