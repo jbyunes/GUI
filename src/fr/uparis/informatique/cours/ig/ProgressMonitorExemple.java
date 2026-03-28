@@ -56,7 +56,7 @@ public class ProgressMonitorExemple {
 	public static void createUI() {
 		final JFrame fenetre = new JFrame(ProgressMonitorExemple.class.toString());
 		fenetre.getContentPane().setLayout(new FlowLayout());
-		JLabel etiquette = new JLabel("<html><big>Yo!</big></html>");
+		JLabel etiquette = new JLabel("<html><big>Hey!</big></html>");
 		fenetre.getContentPane().add(etiquette);
 		JButton b = new JButton("Start job");
 		b.addActionListener(e -> {
