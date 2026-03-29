@@ -5,8 +5,8 @@ import javax.swing.JProgressBar;
 import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
 
-public class JProgressBarExemple {
-	public JProgressBarExemple() {
+public class JProgressBarExemple2 {
+	public JProgressBarExemple2() {
 		JFrame fenetre = new JFrame(this.getClass().toString());
 		final JProgressBar barre = new JProgressBar(SwingConstants.HORIZONTAL,0,100);
 		barre.setIndeterminate(true);
@@ -32,10 +32,6 @@ public class JProgressBarExemple {
 		}).start();
 	}
 	public static void main(String []args) {
-		SwingUtilities.invokeLater(new Runnable() {
-			public void run() {
-				new JProgressBarExemple();
-			}
-		});
+		SwingUtilities.invokeLater(JProgressBarExemple2::new);
 	}
 }

@@ -29,10 +29,8 @@ public class LongJob extends SwingWorker<Integer,Integer> {
 				if (i==40) {
 					Thread.sleep(5000);
 				}
-				// Feed the GUI !
-				publish(i);
-				// Advance computation
-				sum += i;
+				publish(i); // Feed the GUI !
+				sum += i; // Advance computation
 				setProgress(100*i/N);
 			} catch(InterruptedException e) {
 			}
@@ -49,13 +47,11 @@ public class LongJob extends SwingWorker<Integer,Integer> {
 	// RIP 'Lizard King', 7/3/71
 	// This is the end, my only friend, the end, no safety or surprise, the end
 	public void done() {
-		//	pb.setVisible(false);
 		try {
 			this.label.setText("Sum is "+this.get());
 		} catch(Exception e) {
 			System.err.println("Oups");
 		}
-		//	firePropertyChange("done",false,true);
 	}
 }
 
