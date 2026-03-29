@@ -2,6 +2,7 @@ package fr.uparis.informatique.cours.ig;
 
 import javax.swing.undo.AbstractUndoableEdit;
 
+@SuppressWarnings("serial")
 public class UndoableModification extends AbstractUndoableEdit {
     private int addedValue;
     private UndoRedoModel model;

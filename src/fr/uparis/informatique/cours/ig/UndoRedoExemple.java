@@ -10,7 +10,7 @@ public class UndoRedoExemple {
 		Container c = f.getContentPane();
 		c.setLayout(new BorderLayout());
 		UndoRedoLabel l = new UndoRedoLabel();
-		m.addObserver(l);
+		m.subscribe(l);
 		c.add(l,BorderLayout.NORTH);
 		JTextField t = new JTextField(20);
 		c.add(t,BorderLayout.SOUTH);

@@ -1,18 +1,31 @@
 package fr.uparis.informatique.cours.ig;
 
-import java.util.Observable;
-import java.util.Observer;
+import java.util.concurrent.Flow.Subscriber;
+import java.util.concurrent.Flow.Subscription;
 
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
-@SuppressWarnings({ "serial", "deprecation" })
-public class UndoRedoLabel extends JLabel implements Observer {
+@SuppressWarnings("serial")
+public class UndoRedoLabel extends JLabel implements Subscriber<Integer> {
+	private Subscription subscription;
 	public UndoRedoLabel() {
-		super("0",SwingConstants.RIGHT);
+		super("--",SwingConstants.RIGHT);
 	}
-	public void update(Observable o,Object v) {
-		setText(v.toString());
-		// setText(((MyModel)o).getValue());
+	@Override
+	public void onSubscribe(Subscription subscription) {
+		this.subscription = subscription;
+		this.subscription.request(1);
+	}
+	@Override
+	public void onNext(Integer item) {
+		setText(item.toString());	
+		this.subscription.request(1);
+	}
+	@Override
+	public void onError(Throwable throwable) {
+	}
+	@Override
+	public void onComplete() {
 	}
 }

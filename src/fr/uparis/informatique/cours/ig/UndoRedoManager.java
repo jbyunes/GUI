@@ -7,6 +7,7 @@ import javax.swing.JMenuItem;
 import javax.swing.undo.UndoManager;
 import javax.swing.undo.UndoableEdit;
 
+@SuppressWarnings("serial")
 public class UndoRedoManager extends UndoManager {
 	private JMenuItem annuler, rétablir;
 	public UndoRedoManager(JMenuItem a,JMenuItem r) {

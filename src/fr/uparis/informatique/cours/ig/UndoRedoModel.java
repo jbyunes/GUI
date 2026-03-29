@@ -1,20 +1,24 @@
 package fr.uparis.informatique.cours.ig;
 
-import java.util.Observable;
+import java.util.concurrent.Flow;
+import java.util.concurrent.SubmissionPublisher;
 
-@SuppressWarnings("deprecation")
-public class UndoRedoModel extends Observable {
+public class UndoRedoModel extends SubmissionPublisher<Integer> {
 	private int value;
 	public UndoRedoModel() {
 		value = 0;
 	}
 	public void add(int v) {
 		value += v;
-		setChanged();
-		notifyObservers(value);
+		submit(value);
 	}
 	public int getValue() {
 		return value;
+	}
+	@Override
+	public void subscribe(Flow.Subscriber<? super Integer> subscriber) {
+		super.subscribe(subscriber);
+		submit(value); // on new subscriber
 	}
 }
 
