@@ -9,9 +9,8 @@ public class ActiveMVC {
 		JFrame f = new JFrame("MVC");
 		ActiveView1 v1 = new ActiveView1();
 		ActiveView1 v2 = new ActiveView1();
-		model.addObserver(v1);
-		model.addObserver(v2);
-		model.setValeur(0);
+		model.subscribe(v1);
+		model.subscribe(v2);
 		JButton b = new JButton("+1");
 		ActiveController c = new ActiveController(model);
 		b.addActionListener(c);
@@ -22,10 +21,10 @@ public class ActiveMVC {
 		f.getContentPane().add(b);
 		f.pack();
 		f.setVisible(true);
-
 	}
 	public static void main(String []args) throws Exception {
 		SwingUtilities.invokeAndWait(ActiveMVC::createUI);
+		
 		new ActiveAutoController(model).start();
 	}
 }

@@ -1,7 +1,6 @@
 package fr.uparis.informatique.cours.ig.mvc;
 
-public // A class...
-class PassiveModel {
+public class PassiveModel {
 	private int valeur;
 	public PassiveModel() {
 		valeur = 0;

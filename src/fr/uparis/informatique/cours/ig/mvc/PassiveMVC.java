@@ -14,11 +14,11 @@ public class PassiveMVC {
 		PassiveView2 v5 = new PassiveView2();
 		JButton b = new JButton("+1");
 		PassiveController c = new PassiveController(m);
-		c.addView(v1);
-		c.addView(v2);
-		c.addView(v3);
-		c.addView(v4);
-		c.addView(v5);
+		c.subscribe(v1);
+		c.subscribe(v2);
+		c.subscribe(v3);
+		c.subscribe(v4);
+		c.subscribe(v5);
 		b.addActionListener(c);
 
 		f.getContentPane().setLayout(new FlowLayout());
