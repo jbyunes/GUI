@@ -3,7 +3,7 @@ package fr.uparis.informatique.cours.ig;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-public class DetecteurDeClic implements MouseListener {
+public class ClickTracker implements MouseListener {
 	public void mousePressed(MouseEvent e) {
 		System.out.println("Là, tu fais mal! en position "+e.getX()+","+e.getY());
 	}

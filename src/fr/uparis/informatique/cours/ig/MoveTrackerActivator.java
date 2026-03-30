@@ -4,11 +4,11 @@ import java.awt.Component;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-public class DetecteurDeClicBis implements MouseListener {
-	private DetecteurDeMouvement dm;
+public class MoveTrackerActivator implements MouseListener {
+	private MoveTracker dm;
 	private boolean moveDetected;
-	public DetecteurDeClicBis() {
-		dm = new DetecteurDeMouvement();
+	public MoveTrackerActivator() {
+		dm = new MoveTracker();
 		moveDetected = false;
 	}
 	public void mousePressed(MouseEvent e) {

@@ -6,7 +6,7 @@ public class MouseListenerExample {
 		JFrame f = new JFrame("MouseListenerExample");
 		JLabel l = new JLabel("Vas-y, joue avec la souris!");
 		l.setPreferredSize(new Dimension(500,500));
-		l.addMouseListener(new DetecteurDeClic());
+		l.addMouseListener(new ClickTracker());
 		f.getContentPane().add(l);
 		f.pack();
 		f.setVisible(true);
