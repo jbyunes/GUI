@@ -14,6 +14,7 @@ import javax.swing.SwingUtilities;
 public class DrawingPrintingExemple implements Runnable {
 	public void run() {
 		JFrame f = new JFrame("Drawing");
+		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		final DrawingPanel l = new DrawingPanel();
 		f.getContentPane().add(l);
 		JMenu m = new JMenu("Fichier");
