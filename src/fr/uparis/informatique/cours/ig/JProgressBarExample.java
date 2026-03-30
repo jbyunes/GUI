@@ -4,7 +4,7 @@ import java.awt.*;
 import javax.swing.*;
 
 public class JProgressBarExample {
-	static private LongJob lj;
+	static private AsyncLongTask lj;
 	public static void createUI() {
 		JFrame f = new JFrame("ProgressBarExample");
 		Container c = f.getContentPane();
@@ -18,7 +18,7 @@ public class JProgressBarExample {
 		c.add(pb);
 		JButton b = new JButton("Allez!");
 		c.add(b);
-		DoIt doit = new DoIt(pb,result);
+		AsyncTaskLauncher doit = new AsyncTaskLauncher(pb,result);
 		b.addActionListener(doit);
 		JButton click = new JButton("Click!");
 		c.add(click);

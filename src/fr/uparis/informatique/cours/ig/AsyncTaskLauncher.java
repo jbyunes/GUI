@@ -6,17 +6,17 @@ import java.awt.event.ActionListener;
 import javax.swing.JLabel;
 import javax.swing.JProgressBar;
 
-public class DoIt implements ActionListener {
-	LongJob lj;
-	public DoIt(JProgressBar pb, JLabel l) {
-		lj = new LongJob(pb,l);
+public class AsyncTaskLauncher implements ActionListener {
+	AsyncLongTask lj;
+	public AsyncTaskLauncher(JProgressBar pb, JLabel l) {
+		lj = new AsyncLongTask(pb,l);
 	}
 	public void actionPerformed(ActionEvent e) {
 		if (!lj.isDone()) {
 			lj.execute();
 		}
 	}
-	public LongJob getJob() {
+	public AsyncLongTask getJob() {
 		return lj;
 	}
 }

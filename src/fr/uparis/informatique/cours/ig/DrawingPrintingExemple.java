@@ -11,7 +11,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.SwingUtilities;
 
-public class DrawingExemple implements Runnable {
+public class DrawingPrintingExemple implements Runnable {
 	public void run() {
 		JFrame f = new JFrame("Drawing");
 		final DrawingPanel l = new DrawingPanel();
@@ -48,6 +48,6 @@ public class DrawingExemple implements Runnable {
 		});
 	}
 	public static void main(String []args) {
-		SwingUtilities.invokeLater(new DrawingExemple());
+		SwingUtilities.invokeLater(new DrawingPrintingExemple());
 	}
 }

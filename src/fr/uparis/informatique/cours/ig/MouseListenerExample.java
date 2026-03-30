@@ -1,8 +1,5 @@
 package fr.uparis.informatique.cours.ig;
-import java.awt.*;
-import javax.swing.*;
-
-
+import module java.desktop;
 
 public class MouseListenerExample {
 	public static void createUI() {

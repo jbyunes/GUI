@@ -11,7 +11,7 @@ public class PaintPanel extends JPanel {
 		setPreferredSize(new Dimension(200,200));
 	}
 	public void paintComponent(Graphics g) {
-		System.out.println("paintComponent");
+		System.out.println("paintComponent "+System.currentTimeMillis());
 	}
 }
 

@@ -7,8 +7,8 @@ import java.awt.Graphics;
 import javax.swing.JPanel;
 
 @SuppressWarnings("serial")
-public class MyJPanel extends JPanel {
-	public MyJPanel() {
+public class CustomJPanel extends JPanel {
+	public CustomJPanel() {
 		setBackground(Color.RED);
 		setPreferredSize(new Dimension(1000,800));
 	}

@@ -18,7 +18,7 @@ public class CustomJPanelExemple implements Runnable {
 		l1.setOpaque(true);
 
 		JLabel l2 = new JLabel("Là");
-		MyJPanel m = new MyJPanel();
+		CustomJPanel m = new CustomJPanel();
 		Container c = f.getContentPane();
 		c.setLayout(new BorderLayout());
 		c.add(l1,BorderLayout.NORTH);

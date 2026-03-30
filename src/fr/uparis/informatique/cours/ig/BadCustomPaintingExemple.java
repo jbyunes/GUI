@@ -10,8 +10,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingUtilities;
 
-public class BadCustomPaintingExemple implements Runnable {
-	public void run() {
+public class BadCustomPaintingExemple {
+	public static void createUI() {
 		JFrame f = new JFrame("MonComposant");
 		JLabel n = new JLabel("North");
 		final JLabel l = new JLabel("Coucou");
@@ -37,6 +37,6 @@ public class BadCustomPaintingExemple implements Runnable {
 		}).start();
 	}
 	public static void main(String []args) {
-		SwingUtilities.invokeLater(new BadCustomPaintingExemple());
+		SwingUtilities.invokeLater(BadCustomPaintingExemple::createUI);
 	}
 }

@@ -7,11 +7,11 @@ import javax.swing.JLabel;
 import javax.swing.JProgressBar;
 import javax.swing.SwingWorker;
 
-public class LongJob extends SwingWorker<Integer,Integer> {
+public class AsyncLongTask extends SwingWorker<Integer,Integer> {
 	private JProgressBar pb;
 	private JLabel label;
 	private int sum;
-	public LongJob(JProgressBar pb, JLabel l) {
+	public AsyncLongTask(JProgressBar pb, JLabel l) {
 		this.pb = pb;
 		this.label = l;
 		this.sum = 0;

@@ -1,9 +1,5 @@
 package fr.uparis.informatique.cours.ig;
 import module java.desktop;
-//import java.awt.*;
-//import java.awt.event.*;
-//import javax.swing.*;
-
 
 class Ecouteur extends AbstractAction {
 	private static final long serialVersionUID = 1L;

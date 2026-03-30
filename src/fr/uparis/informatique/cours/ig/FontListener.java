@@ -10,11 +10,11 @@ import javax.swing.JMenuItem;
 
 public class FontListener implements ActionListener {
 	private JLabel l;
-	private JFrame c;
-	public FontListener(JFrame c,JLabel l) { this.l = l; this.c = c; }
+	private JFrame frame;
+	public FontListener(JFrame frame,JLabel l) { this.l = l; this.frame = frame; }
 	public void actionPerformed(ActionEvent e) {
 		l.setFont(new Font(((JMenuItem)e.getSource()).getText(),Font.PLAIN,24));
-		c.pack();
+		frame.pack();
 	}
 }
 
